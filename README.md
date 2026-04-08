@@ -58,14 +58,14 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `[Student 1]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `[Student 2]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Devshi Barman` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Samarth Saluja` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
 
 ## 1.3 Project Title
-`[Enter the title of your project]`
+`SolFlower`
 
 ## 1.4 One-Line Pitch
-`[Describe your project in one sentence]`
+`An autonomous, responsive flower that chase the brightest light, guided by sensors in real time.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
