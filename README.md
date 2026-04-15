@@ -65,7 +65,7 @@ By the final review, this README should clearly show:
 `SolFlower`
 
 ## 1.4 One-Line Pitch
-`An autonomous, responsive flower that chase the brightest light, guided by sensors in real time.`
+`An autonomous, responsive flower that chases the brightest light, guided by sensors in real time.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
