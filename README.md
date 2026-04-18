@@ -62,10 +62,10 @@ By the final review, this README should clearly show:
 | `Samarth Saluja` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
 
 ## 1.3 Project Title
-`SolFlower`
+`Connect 4`
 
 ## 1.4 One-Line Pitch
-`An autonomous, responsive flower that chases the brightest light, guided by sensors in real time.`
+`A responsive, light-based Connect 4 where glowing pixels fall, react, and celebrate each move, turning a classic game into an interactive visual experience.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -75,7 +75,8 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`[Write here]`
+`This project is an interactive, light-based reimagining of Connect 4, built as a physical installation using an ESP32-controlled LED grid. Instead of static tokens, each move is visualized through glowing pixels that animate as they “fall” into place, creating a dynamic and responsive board. Players take turns from the same side, selecting columns via buttons, while the system updates in real time with color-coded feedback for each player. The board itself is designed as a diffused light surface, making each cell appear soft and luminous rather than harsh or digital.
+The experience is playful and engaging because it transforms a familiar game into something more alive and sensory. The falling animation builds anticipation, the shifting colors make each turn visually distinct, and the moment of winning is amplified through light highlights and sound/music feedback.The project combines simple game logic with embedded electronics, using an ESP32, WS2812 LED strips, push-button inputs, and a buzzer, integrating code, material, and interaction design into a cohesive, responsive model.`
 
 ---
 
