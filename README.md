@@ -102,7 +102,9 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`[Write here]`
+`The experience is a tactile, light-driven reinterpretation of Connect 4, where players interact with a responsive surface instead of physical tokens. By touching a column, they trigger a glowing piece that “falls” through the grid, creating a real-time visual animation.
+Each move builds tension in the players' mind as the light descends, while the soft glow and color shifts create a sense of immersion. There is also a subtle satisfaction in seeing cause and effect unfold instantly, touch leading to motion—making the interaction feel intuitive and responsive.
+The experience invites repetition through its balance of familiarity and variation.The immediacy of interaction and the visual reward system encourage players to replay, experiment with moves, and engage both competitively and playfully.`
 
 ## 2.3 Design Persona
 Complete the sentence below:
@@ -110,7 +112,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[Write here]`
+`We are designing this project as if we are a small creative studio making a **playable object / interactive light-based game** for a **mixed audience of classmates and exhibition visitors.`
 
 ---
 
