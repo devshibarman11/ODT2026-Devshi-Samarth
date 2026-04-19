@@ -285,10 +285,10 @@ Add a sketch with labels showing:
 
 | Dimension | Value |
 |---|---|
-| Length | `[Write here]` |
-| Width | `[Write here]` |
-| Height | `[Write here]` |
-| Estimated weight | `[Write here]` |
+| Length | `40 cm` |
+| Width | `30 cm` |
+| Height | `40 cm` |
+| Estimated weight | `Around 1Kg` |
 
 ---
 
@@ -548,7 +548,7 @@ FUNCTION CHECK MANUAL RESET:
 
 ## 11.1 Is an app part of this project?
 - [ ] Yes
-- [ ] No
+- [check ] No
 
 If yes, complete this section.
 
@@ -564,28 +564,28 @@ Examples:
 - displaying data.
 
 **Response:**  
-`[Write here]`
+`N/A`
 
 ## 11.3 App Features
 
 | Feature | Purpose |
 |---|---|
-| `[Bluetooth connect button]` | `[Purpose]` |
-| `[Score display]` | `[Purpose]` |
-| `[Control button / slider / label]` | `[Purpose]` |
+| `N/A` | `N/A` |
+| `N/A` | `N/A` |
+| `N/A` | `N/A` |
 
 ## 11.4 UI Mockup
 Insert a sketch or screenshot of the app interface.
 
 **Insert image below:**  
-`[Upload image and link here]`
+`N/A`
 
 ## 11.5 App Screen Flow
 
-1. `[Step 1]`
-2. `[Step 2]`
-3. `[Step 3]`
-4. `[Step 4]`
+1. `N/A`
+2. `N/A`
+3. `N/A`
+4. `N/A`
 
 ---
 
