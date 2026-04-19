@@ -249,10 +249,11 @@ All components are integrated into a fabricated tabletop structure that holds th
 
 | System Part | Type | What It Does |
 |---|---|---|
-| `[Button / Sensor / Switch / App Input]` | Input | `[Describe]` |
-| `[ESP32 / Controller]` | Processing | `[Describe]` |
-| `[LED / Motor / Servo / Buzzer / Display]` | Output | `[Describe]` |
-| `[Mechanical Assembly]` | Physical Action | `[Describe]` |
+| `Capacitive Touch Sensors (6 columns)` | Input | `Detect player touch and map it to a specific column selection` |
+| `ESP32 Microcontroller` | Processing | `Handles turn logic, piece placement, game state updates, and win detection` |
+| `LED Grid` | Output | `Visually represents the board, player moves, and game progression using color` |
+| `Buzzer` | Output | `Provides sound feedback for actions like piece drop and win events` |
+| `Fabricated Game Structure` | Physical Action | `Holds and organizes all components into a stable, playable tabletop form` |
 
 ---
 
@@ -307,13 +308,14 @@ Check all that apply.
 - [ ] Wheels
 - [ ] Sliders
 - [ ] Levers
-- [ ] Not applicable
+- [check] Not applicable
 
 ## 8.2 Mechanical Description
 Describe the mechanism and what it is meant to do.
 
 **Response:**  
-`[Write here]`
+`The system does not rely on any active mechanical mechanisms for movement or transformation. Instead, it is built as a static fabricated structure designed to support and organize the electronic components.
+Rather, the physical build organizes the LED grid for clear readability and places the touch sensors for easy access. It maintains stability, spacing, and alignment so the interaction feels precise and consistent. Any “movement,” like pieces falling, is simulated through LEDs rather than physical mechanisms.`
 
 ## 8.3 Motion Planning
 If something moves, explain:
@@ -324,21 +326,23 @@ If something moves, explain:
 - what could go wrong.
 
 **Response:**  
-`[Write here]`
+`There is no physical movement in the system; all motion is simulated through LED behavior.
+Led Motions includes the “moving” element is the visual representation of a game piece falling down a column. This is triggered by a player’s touch input, after which the microcontroller updates the LEDs sequentially to mimic downward motion.
+Since the motion is digital, potential issues include delayed input detection, inconsistent LED updates, or timing glitches that may disrupt the illusion of smooth movement.`
 
 ## 8.4 Simulation / CAD / Animation Before Making
 If your project includes mechanical motion, document the digital planning before fabrication.
 
 | Tool Used | File / Link | What Was Tested |
 |---|---|---|
-| `[Fusion 360 / Tinkercad / other]` | `[Link or screenshot]` | `[What did you validate?]` |
-| `[Tool]` | `[Link or screenshot]` | `[What did you validate?]` |
+| `N/A` | `N/A` | `N/A` |
+| `N/A` | `N/A` | `N/A` |
 
 ## 8.5 Changes After Digital Testing
 What changed after the CAD, animation, or simulation stage?
 
 **Response:**  
-`[Write here]`
+`N/A`
 
 ---
 
@@ -348,15 +352,26 @@ What changed after the CAD, animation, or simulation stage?
 
 | Component | Quantity | Purpose |
 |---|---:|---|
-| `[ESP32]` | `1` | `[Main controller]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
+| `[ESP32]` | `1` | `Main controller handling input, logic, and output` |
+| `LED Strip` | `1` | `Creates the visual game grid and displays player moves` |
+| `Capacitive Touch Sensors (GPIO touch pins)` | `6` | `Detect player input for each colum` |
+| `Buzzer` | `1` | `Provides sound feedback for actions and win events` |
+| `Resistors / Connecting Wires` | `Around 40` | `Ensure stable connections and circuit integrity` |
+| `Power Supply` | `1` | `Powers the entire system` |
 
 ## 9.2 Wiring Plan
 Describe the main electrical connections.
 
 **Response:**  
-`[Write here]`
+`Power Distribution
+The ESP32 is powered via a 5V USB supply. The same power source is used to drive the LED strip, ensuring consistent brightness across the grid. A common ground is maintained between all components (ESP32, LEDs, buzzer, and touch inputs) to ensure stable signal flow and prevent noise issues.
+LED Connections
+The NeoPixel LED strip is connected to a single digital output pin on the ESP32. This pin sends data signals that control the color and state of each LED in the grid. The strip receives 5V power and ground directly, while the data line is optionally passed through a resistor to stabilize the signal.
+Touch Input Connections
+Each column is mapped to a dedicated capacitive touch pin on the ESP32. No external wiring is required beyond connecting conductive pads or wires to the touch pins, making the input system minimal
+Buzzer Connection
+The buzzer is connected to a digital output pin on the ESP32. The buzzer shares the common ground with the rest of the system.
+All components are wired back to the ESP32, which acts as the central hub.`
 
 ## 9.3 Circuit Diagram
 Insert a hand-drawn or software-made circuit diagram.
