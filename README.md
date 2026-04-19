@@ -187,11 +187,10 @@ If your project is a game, list the rules clearly.
 ## 5.1 Definition of “Playable”
 Your project will be considered complete only if these conditions are met.
 
-- [ ] `[Condition 1]`
-- [ ] `[Condition 2]`
-- [ ] `[Condition 3]`
-- [ ] `[Condition 4]`
-- [ ] `[Condition 5]`
+- [ ] `The system accurately detects touch input for all columns without delay or missed triggers.`
+- [ ] `LED grid correctly maps and displays player moves in real-time with clear visuals.`
+- [ ] `Turn-based interaction works smoothly, alternating between two players with distinct colors.`
+- [ ] `Win condition is correctly detected when a player connects four in a row (only horizontal, vertical, or diagonal).`
 
 ## 5.2 Minimum Viable Version
 What is the smallest version of this project that still delivers the core experience?
