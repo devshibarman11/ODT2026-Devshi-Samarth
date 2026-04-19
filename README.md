@@ -131,7 +131,9 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-`[Write here]`
+`What makes our project original is the translation of a familiar, static board game into a dynamic, physical-digital experience. 
+Instead of static pieces, moves are expressed through LED animations, touch input, and sound, making each action dynamic and engaging. The use of paired LEDs as “light pixels” and the falling animation adds a unique visual language. It shifts the game from something you simply play to something you physically interact with and experience.
+To put it together, the originality lies not in reinventing the rules of the game, but in redesigning how the game is felt, seen, and experienced through interaction.`
 
 ---
 
@@ -147,37 +149,37 @@ Examples:
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`[Write here]`
+`user input (touch) → system response (animated LED drop) → visual state update → turn transition → next input`
 
 ## 4.2 Intended Player / Audience
 
 | Question | Response |
 |---|---|
-| Who is this for? | `[Write here]` |
-| Age range | `[Write here]` |
-| Solo or multiplayer | `[Write here]` |
-| Expected duration of one round | `[Write here]` |
-| What should the player feel? | `[Write here]` |
-| Is explanation required before use? | `[Write here]` |
+| Who is this for? | `Anyone who enjoys playful, interactive games and engaging with light-based experiences` |
+| Age range | `10+ (teens to adults)` |
+| Solo or multiplayer | `Multiplayer (2 players)` |
+| Expected duration of one round | `2-5 Minutes` |
+| What should the player feel? | `Focused, engaged, and responsive to the rhythm of play` |
+| Is explanation required before use? | `Minimal but basic game rules may need a quick explanation` |
 
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
 
-1. **Approach:** `[How does the player first encounter it?]`
-2. **Start:** `[How do they begin?]`
-3. **First Action:** `[What do they do first?]`
-4. **Main Interaction:** `[What keeps happening during use?]`
-5. **System Response:** `[How does the project respond?]`
-6. **Win / Lose / End Condition:** `[How does one round end?]`
-7. **Reset:** `[How does the next round begin?]`
+1. **Approach:** `The player notices a  glowing grid that invites interaction through light rather than physical pieces.`
+2. **Start:** `The system is already active; players understand they can begin by interacting with the surface.`
+3. **First Action:** `The player touches one of the coloumn to make their move.`
+4. **Main Interaction:** `Players take turns selecting columns, building their positions while observing the evolving pattern of lights.`
+5. **System Response:** `The board responds instantly, lighting up a colored piece that animates as it “falls” into place, with subtle sound feedback reinforcing each move.`
+6. **Win / Lose / End Condition:** `A round ends when a player connects four pieces, highlighted through a distinct light animation and sound, or when the board fills up.`
+7. **Reset:** `After a short end animation, the board clears itself and returns to its initial state, ready for the next round.`
 
 ## 4.4 Rules of Play
 If your project is a game, list the rules clearly.
 
-- `[Rule 1]`
-- `[Rule 2]`
-- `[Rule 3]`
-- `[Rule 4]`
+- `A player can select only one column per turn; multiple inputs are not allowed, and the turn passes after a single move is made.`
+- `Once a move is made and the piece is placed, it cannot be undone or changed.`
+- `The win only counts if the four pieces of the same color are connected in a row, either horizontally, vertically, or diagonally.`
+  
 
 ---
 
@@ -196,14 +198,15 @@ Your project will be considered complete only if these conditions are met.
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
-`[Write here]`
+`The smallest version of this project that still preserves the core experience is a 3 × 3 grid (Connect 3) with three input columns, simple LED feedback, two-player turn-taking, and basic win detection. 
+This scaled-down version retains the essential interaction; players choose a column, a piece drops, the system updates, and a win condition is checked, creating a clear loop of action and response`
 
 ## 5.3 Stretch Features
 What features are nice to have but not essential?
 
-- `[Stretch feature 1]`
-- `[Stretch feature 2]`
-- `[Stretch feature 3]`
+- `Sound feedback using a buzzer for piece drops and win events`
+- `Animated LED fall transitions instead of instant lighting`
+- `Reset animation or visual play when the game restarts`
 
 ---
 
@@ -212,17 +215,17 @@ What features are nice to have but not essential?
 ## 6.1 Project Type
 Check all that apply.
 
-- [ ] Electronics-based
+- [check] Electronics-based
 - [ ] Mechanical
-- [ ] Sensor-based
+- [check] Sensor-based
 - [ ] App-connected
 - [ ] Motorized
-- [ ] Sound-based
-- [ ] Light-based
+- [check] Sound-based
+- [check] Light-based
 - [ ] Screen/UI-based
-- [ ] Fabricated structure
-- [ ] Game logic based
-- [ ] Installation / tabletop experience
+- [check] Fabricated structure
+- [check] Game logic based
+- [check] Installation / tabletop experience
 - [ ] Other: `[Write here]`
 
 ## 6.2 High-Level System Description
@@ -236,7 +239,11 @@ Include:
 - app interaction if any.
 
 **Response:**  
-`[Write here]`
+`The system is a compact, self-contained physical game built around touch input, simple game logic, and responsive feedback. Players interact using capacitive touch sensors mapped to each column of the grid. Each touch acts as a clear input, allowing the player to choose where their piece should be placed. The interaction is designed to feel immediate and intuitive, requiring no additional interface or instructions.
+Once an input is received, the microcontroller processes it in real time. It handles turn-taking between two players, determines how the piece “falls” within the column, updates the internal game state, and continuously checks for win conditions. 
+This layer of logic ensures that the game flows smoothly and enforces the rules without any manual intervention.
+The output is delivered through an LED grid that visualizes the falling pieces and game state, along with a buzzer for basic sound feedback.
+All components are integrated into a fabricated tabletop structure that holds the LED grid, sensors, and circuitry in a stable and accessible form. The system does not rely on any external app or screen, the entire experience is physical, direct, and designed to be understood through interaction alone.`
 
 ## 6.3 Input / Output Map
 
