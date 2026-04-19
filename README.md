@@ -52,14 +52,14 @@ By the final review, this README should clearly show:
 # 1. Team Identity
 
 ## 1.1 Studio / Group Name
-`[Enter your group name]`
+`Quad Link`
 
 ## 1.2 Team Members
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `Devshi Barman` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `Samarth Saluja` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Devshi Barman` | `Electronics + Coding` | `Fabrication` | `[Write here]` |
+| `Samarth Saluja` | `Coding + Fabrication` | `Electronics` | `[Write here]` |
 
 ## 1.3 Project Title
 `Connect 4`
@@ -123,9 +123,8 @@ List what inspired the project.
 
 | Source Type | Title / Link | What Inspired You |
 |---|---|---|
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
+| `Board Game` | `Connect Four (classic vertical strategy game)` | `Core gameplay logic: gravity-based token drop, 2-player turn system, and “connect 4 in a row” win condition translated into a digital LED grid.` |
+| `Interactive Installation` | `Light-based interactive art installations` | `Use of light as a responsive medium and creating an immersive, playful move that reacts to user input.` |
 
 ## 3.2 Original Twist
 What makes your project original?
