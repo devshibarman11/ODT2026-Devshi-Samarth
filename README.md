@@ -363,13 +363,13 @@ What changed after the CAD, animation, or simulation stage?
 Describe the main electrical connections.
 
 **Response:**  
-`Power Distribution
+`Power Distribution -
 The ESP32 is powered via a 5V USB supply. The same power source is used to drive the LED strip, ensuring consistent brightness across the grid. A common ground is maintained between all components (ESP32, LEDs, buzzer, and touch inputs) to ensure stable signal flow and prevent noise issues.
-LED Connections
+LED Connections -
 The NeoPixel LED strip is connected to a single digital output pin on the ESP32. This pin sends data signals that control the color and state of each LED in the grid. The strip receives 5V power and ground directly, while the data line is optionally passed through a resistor to stabilize the signal.
-Touch Input Connections
+Touch Input Connections -
 Each column is mapped to a dedicated capacitive touch pin on the ESP32. No external wiring is required beyond connecting conductive pads or wires to the touch pins, making the input system minimal
-Buzzer Connection
+Buzzer Connection -
 The buzzer is connected to a digital output pin on the ESP32. The buzzer shares the common ground with the rest of the system.
 All components are wired back to the ESP32, which acts as the central hub.`
 
@@ -383,10 +383,10 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Question | Response |
 |---|---|
-| Power source | `[USB / battery / adapter / other]` |
-| Voltage required | `[Write here]` |
-| Current concerns | `[Write here]` |
-| Safety concerns | `[Write here]` |
+| Power source | `[USB 5V` |
+| Voltage required | `5V for LED strip, 3.3V logic for ESP32` |
+| Current concerns | `LED strip can draw higher current at full brightness; brightness is limited in code to prevent overload` |
+| Safety concerns | `Ensure common ground, avoid loose connections, and prevent overheating` |
 
 ---
 
@@ -396,8 +396,8 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform | Purpose |
 |---|---|
-| `[MicroPython / Arduino / MIT App Inventor / CAD tool / other]` | `[Purpose]` |
-| `[Tool]` | `[Purpose]` |
+| `[MicroPython` | `Writing and running the game logic on the ESP32` |
+| `Thonny` | `Uploading code to the ESP32 and debugging` |
 
 ## 10.2 Software Logic
 Describe what the code must do.
@@ -412,7 +412,20 @@ Include:
 - reset behavior.
 
 **Response:**  
-`[Write here]`
+`Startup Behavior -
+On powering up, the system initializes the ESP32, sets up all touch input pins, configures the LED grid, and clears any previous state. The board starts in a neutral state with all LEDs off or showing a default pattern, ready for the first player.
+Input Handling -
+The system continuously listens for touch input from the capacitive sensors. Each sensor corresponds to a column, and a valid touch is registered once it crosses a defined threshold to avoid false triggers.
+Sensor Reading -
+Touch values are read in real time and filtered to ensure quick but stable detection. Sensitivity is tuned so inputs feel responsive without accidental activation.
+Decision Logic -
+Once a valid input is detected, the system checks whose turn it is, finds the lowest available position in the selected column, and updates the internal game state. It then checks for a win condition
+Output Behavior -
+The LED grid updates to show the new piece placement using the current player’s color. A short animation simulates the piece “falling” into place. The buzzer provides feedback for actions like a move or a win.
+Communication Logic-
+There is no external communication; all processing happens locally on the ESP32.
+Reset Behavior -
+After a win or draw, the system plays a simple feedback pattern and then resets the board either automatically or manually, preparing for a new game.`
 
 ## 10.3 Code Flowchart
 Insert a flowchart showing your code logic.
@@ -433,7 +446,100 @@ Suggested sequence:
 ## 10.4 Pseudocode
 
 ```text
-[Write your pseudocode here]
+START
+
+INITIALIZE:
+    Set grid size (7 rows × 6 columns)
+    Initialize touch sensors for each column
+    Initialize LED rows
+    Initialize buzzer
+    Set current player = Player 1
+    Clear board
+
+LOOP forever:
+
+    CHECK manual reset:
+        IF both edge sensors are touched:
+            Run reset animation
+            Reset grid
+            Set current player = Player 1
+            CONTINUE loop
+
+    FOR each column:
+        Read touch value
+
+        IF touch detected AND it was not touched before:
+            HANDLE MOVE for that column
+
+    Small delay
+
+END LOOP
+
+
+FUNCTION HANDLE MOVE(column):
+
+    IF top of column is filled:
+        Play invalid move animation
+        RETURN
+
+    FIND lowest empty row in column
+
+    PLACE current player's piece in grid
+
+    PLAY drop sound
+
+    ANIMATE piece falling down the column using LEDs
+
+    IF current player wins:
+        Play win animation (lights + sound)
+        Show smiley
+        Reset game
+        RETURN
+
+    SWITCH player
+
+
+FUNCTION CHECK WIN(player):
+
+    CHECK horizontal matches of 4
+    CHECK vertical matches of 4
+    CHECK diagonal (both directions) matches of 4
+
+    IF any match found:
+        RETURN TRUE
+    ELSE:
+        RETURN FALSE
+
+
+FUNCTION INVALID MOVE ANIMATION(column):
+
+    Flash column in white
+    Play descending error tones
+    Restore original colors
+
+
+FUNCTION WIN ANIMATION(player):
+
+    Fill board with player color
+    Play melody with blinking lights
+    Show smiley face
+
+
+FUNCTION RESET ANIMATION:
+
+    Clear board
+    Sweep yellow across columns
+    Clear board again
+    Reset grid
+    Set current player = Player 1
+
+
+FUNCTION CHECK MANUAL RESET:
+
+    IF first AND last touch sensors are pressed:
+        RETURN TRUE
+    ELSE:
+        RETURN FALSE
 ```
 
 ---
