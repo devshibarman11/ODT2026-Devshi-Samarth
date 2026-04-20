@@ -760,20 +760,22 @@ What is the single biggest uncertainty in your project at this stage?
 
 | What Needs Testing | How You Will Test It | Success Condition |
 |---|---|---|
-| `[Bluetooth connection]` | `[Method]` | `[What counts as success?]` |
-| `[Mechanism movement]` | `[Method]` | `[What counts as success?]` |
-| `[Sensor behavior]` | `[Method]` | `[What counts as success?]` |
-| `[App communication]` | `[Method]` | `[What counts as success?]` |
+| `Touch sensor inpu` | `Repeatedly tap each sensor across different speeds and pressures` | `Each touch is detected instantly with no false triggers or missed inputs` |
+| `Falling animation` | `Drop discs in all columns multiple times` | `Smooth top-to-bottom motion with no flickering or skipped positions` |
+| `Game logic (win detection)` | `Simulate horizontal, vertical, and diagonal wins` | `All valid win conditions are detected accurately every time` |
+| `Invalid move handling` | `Fill a column and attempt another move` | `System blocks move and shows correct visual + sound feedback` |
+| `Sound feedback` | `Trigger drop, error, and win scenarios` | `Sound plays correctly and stops without overlapping` |
+| `Reset interaction` | `Trigger manual reset using touch combination (1st and 6th buttons)` | `Board clears fully and game restarts reliably` |
 
 ## 16.2 Playtesting Plan
 
 | Question | How You Will Check |
 |---|---|
-| Do players understand what to do? | `[Method]` |
-| Is the interaction satisfying? | `[Method]` |
-| Do players want another turn? | `[Method]` |
-| Is the challenge balanced? | `[Method]` |
-| Is the response clear and immediate? | `[Method]` |
+| Do players understand what to do? | `Observe first-time users playing without instructions and note if they can start and continue the game independently` |
+| Is the interaction satisfying? | `User feedback after playing and observe reactions to animations, sound, and touch response` |
+| Do players want another turn? | `Check if players voluntarily replay or ask to play again after one round` |
+| Is the challenge balanced? | `Calculate duration - whether players remain engaged and if games feel neither too short nor too repetitive` |
+| Is the response clear and immediate? | `Monitor if users notice any delay or confusion between touch input and system feedback (LED + sound` |
 
 ## 16.3 Testing and Debugging Log
 
@@ -786,8 +788,8 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
 |---|---|---|---|---|
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
+| `Peer` | `Interacted with the setup, initially unsure how to start` | `Couldn’t immediately identify the game` | `Once told it was Connect 4, they quickly understood and engaged with the gameplay` | `Add a simple visual cue or label to indicate the game and basic interaction` |
+| `Classmate` | `Tried pressing different touch inputs to understand response` | `Unsure how the buttons mapped to the game and what each touch did along with sensitivity rate` | `Enjoyed the falling animation, sound feedback, and overall responsiveness (the smiley in the end)` | `Make input mapping clearer` |
 
 ---
 
