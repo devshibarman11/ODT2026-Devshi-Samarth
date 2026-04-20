@@ -637,18 +637,24 @@ Overall, each material and component was chosen to simplify fabrication, enhance
 
 | Budget Item | Estimated Cost |
 |---|---:|
-| Electronics | `[Cost]` |
-| Mechanical parts | `[Cost]` |
-| Fabrication materials | `[Cost]` |
-| Purchased extras | `[Cost]` |
-| Contingency | `[Cost]` |
-| **Total** | `[Cost]` |
+| Electronics | `[2200]` |
+| Mechanical parts | `[500]` |
+| Fabrication materials | `[200]` |
+| Purchased extras | `[400]` |
+| Contingency | `[400]` |
+| **Total** | `[3700]` |
 
 ## 12.5 Budget Reflection
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`[Write here]`
+`he overall cost of the project increased primarily due to changes in our initial concept. Our earlier design required two MG995 servo motor units, which significantly added to the electronics budget. Although we later shifted direction, this early investment contributed to the higher overall cost.
+
+Another factor was the need to replace multiple power supplies. During early experimentation with servos and LED systems, we overloaded and damaged a few units, which led to additional unplanned expenses.
+
+We also purchased extra components as a precaution, since sourcing parts involved ordering from a store in Thane and included delivery costs. To avoid delays, we opted to have backups on hand, which further increased spending.
+
+If the budget needed to be reduced, we could simplify the system by minimizing high-power components, limiting redundant purchases, and planning procurement more efficiently to avoid excess orders and delivery charges.]`
 
 ---
 
