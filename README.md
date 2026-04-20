@@ -822,7 +822,7 @@ Suggested images:
 - final build.
 
 Example:
-`![Final Build](../images/Final_Build)`
+<img src="images/Final_Build.HEIC">
 
 
 
