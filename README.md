@@ -630,8 +630,7 @@ Overall, each material and component was chosen to simplify fabrication, enhance
 
 | Item | Why Needed | Purchase Link | Latest Safe Date to Procure | Status |
 |---|---|---|---|---|
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
+| `addressable led strip` | `indivisual color code each neopixel` | `Store bought` | `18 April` | `Received` |
 
 ## 12.4 Budget Summary
 
@@ -764,10 +763,10 @@ Expected outcomes:
 
 | Risk | Type | Likelihood | Impact | Mitigation Plan | Owner |
 |---|---|---|---|---|---|
-| `Touch sensors give inconsistent readings` | `Technical` | `High` | `High` | `Tune threshold, use edge detection for stable input` | `[Name]` |
-| `[Example: Structure breaks during play]` | `Mechanical` | `Medium` | `High` | `[Reinforce joints / change material]` | `[Name]` |
-| `[Risk]` | `[Technical / Material / Time / Gameplay]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
-| `[Risk]` | `[Type]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
+| `Mechanical system (solar flower) too complex to execute` | `Mechanical` | `High` | `High` | `Simplify or pivot to non-mechanical interaction` | `Team` |
+| `Touch sensors give inconsistent readings` | `Technical` | `High` | `High` | `Tune threshold, use edge detection for stable input` | `Team` |
+| `LED mapping / display errors` | `Technical` | `Medium` | `Medium` | `Test row-by-row and standardize indexing` | `Team` |
+| `Game logic bugs (win detection / move errors)` | `Technical` | `Medium` | `High` | `Test edge cases and debug iteratively` | `Team` |
 
 ## 15.2 Biggest Unknown Right Now
 What is the single biggest uncertainty in your project at this stage?
