@@ -593,9 +593,18 @@ Insert a sketch or screenshot of the app interface.
 
 | Item | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
 |---|---:|---|---|---:|---|---|
-| `[ESP32]` | `1` | `Yes` | `No` | `0` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
+| `ESP32` | `1` | `Yes` | `No` | `NA` | `ESP32` | `Main microcontroller` |
+| `Power supply module` | `4` | `Yes` | `Yes` | `90` | `MB102 breadboard power supply` | `Power supplies overloaded during experimentation` |
+| `Jumper wires` | `1 pack` | `Yes` | `Yes` | `60` | `standard jumper cables` | `Needed Extra wires` |
+| `LED Strips` | `3 meteres]` | `no` | `Yes` | `600` | `WS2812B RGB Individually Addressable Pixel LED Strip` | `To represent the disks in connect four` |
+| `resistors` | `7` | `Yes` | `No` | `NA` | `330ohm` | `regulate current between led strips and esp32` |
+| `Servo Motors` | `2` | `NO` | `yes` | `[800]` | `MG995 servos motors` | `needed for the previous idea but we had to change it due to time constraints` |
+| `Breadboard` | `2` | `Yes` | `No` | `NA` | `Standard` | `to manage the connections` |
+| `LDR sensors` | `4` | `No` | `Yes` | `200` | `12mm Ldr sensors` | `needed for the previous idea but we had to change it due to time constraints` |
+| `Led Strip` | `1 meter` | `No` | `yes` | `200` | `Analog Led Strip` | `Wrong kind of Led strip` |
+
+
+
 
 ## 12.2 Material Justification
 Explain why you selected your main materials and components.
