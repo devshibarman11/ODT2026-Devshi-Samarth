@@ -979,24 +979,24 @@ In terms of build quality, the use of a hot glue gun to assemble parts of the MD
 # 20. Final Submission Checklist
 
 Before submission, confirm that:
-- [ ] Team details are complete
-- [ ] Project description is complete
-- [ ] Inspiration sources are included
-- [ ] Player journey is written
-- [ ] Sketches are added
-- [ ] BOM is complete
-- [ ] Purchase list is complete
-- [ ] Budget summary is complete
-- [ ] Mechanical planning is documented if applicable
-- [ ] App planning is documented if applicable
-- [ ] Code flowchart is added
-- [ ] Task breakdown is complete
-- [ ] Weekly logs are updated
-- [ ] Risk register is complete
-- [ ] Testing log is updated
-- [ ] Playtesting notes are included
-- [ ] Build photos are included
-- [ ] Final reflection is written
+- [yes] Team details are complete
+- [yes] Project description is complete
+- [yes] Inspiration sources are included
+- [yes] Player journey is written
+- [yes] Sketches are added
+- [yes] BOM is complete
+- [yes] Purchase list is complete
+- [yes] Budget summary is complete
+- [yes] Mechanical planning is documented if applicable
+- [yes] App planning is documented if applicable
+- [yes] Code flowchart is added
+- [yes] Task breakdown is complete
+- [yes] Weekly logs are updated
+- [yes] Risk register is complete
+- [yes] Testing log is updated
+- [yes] Playtesting notes are included
+- [yes] Build photos are included
+- [yes] Final reflection is written
 
 ---
 
