@@ -671,14 +671,15 @@ Include:
 
 | Task ID | Task | Owner | Estimated Hours | Deadline | Dependency | Status |
 |---|---|---|---:|---|---|---|
-| T1 | `[Finalize concept]` | `[Name]` | `2` | `[Date]` | `None` | `To Do` |
-| T2 | `[Complete BOM]` | `[Name]` | `1` | `[Date]` | `T1` | `To Do` |
-| T3 | `[Test electronics]` | `[Name]` | `2` | `[Date]` | `T1` | `To Do` |
-| T4 | `[Build structure]` | `[Name]` | `4` | `[Date]` | `T1` | `To Do` |
-| T5 | `[Write control code]` | `[Name]` | `4` | `[Date]` | `T3` | `To Do` |
-| T6 | `[Integrate system]` | `[Name]` | `4` | `[Date]` | `T4, T5` | `To Do` |
-| T7 | `[Playtest]` | `[Name]` | `2` | `[Date]` | `T6` | `To Do` |
-| T8 | `[Refine and document]` | `[Name]` | `3` | `[Date]` | `T7` | `To Do` |
+| T1 | `Initial concept exploration` | `Team` | `2` | `Week 1` | `None` | `Done` |
+| T2 | `Basic component setup (ESP32, LEDs, touch)` | `Team` | `2` | `Week 2` | `T1` | `Done` |
+| T3 | `Early testing (input + output trials)` | `Team` | `3` | `week 3` | `T2/T1` | `Did not complete` |
+| T4 | `Define Connect 4 interaction and grid system` | `team` | `3` | `week 4` | `N/A` | `Done` |
+| T5 | `Build core game logic` | `team` | `4` | `week 4` | `T4` | `Done` |
+| T6 | `Implement LED animations and visual feedback` | `Devshi` | `4` | `week 4` | `T5` | `Done` |
+| T7 | `Integrate touch input with full system` | `team` | `3` | `week 4` | `T5` | `Done` |
+| T8 | `Add sound feedback and error handling` | `samarth` | `3` | `week 4` | `T7` | `Done` |
+| T9 | `Playtesting, refinement, and final documentation` | `team` | `3` | `week 4` | `T8` | `Done` |
 
 ## 13.3 Responsibility Split
 
