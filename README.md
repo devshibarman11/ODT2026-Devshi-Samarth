@@ -822,7 +822,7 @@ Suggested images:
 - final build.
 
 Example:
-``![Final Build](../images/Final_Build)`md
+`![Final Build](../images/Final_Build)`
 
 
 
