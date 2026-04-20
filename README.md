@@ -868,9 +868,9 @@ Example:
 
 | Version | Date | What Changed | Why |
 |---|---|---|---|
-| `v1` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3` | `[Date]` | `[Describe]` | `[Reason]` |
+| `v1` | `[18/04/26]` | `Basic Connections and prototype with wires as buttons` | `To test out the connections and see if the power supply is able to handle all the led strips along with checking functionality of the touchpins` |
+| `v2` | `[19/04/26]` | `Final buttons along with a basic mount for the breadboard and main board that has the leds stuck on it, the game functions as wanted perfectly now, but the structure is still just barebones` | `To prepare the internal mechanism before inserting it in the final casing` |
+| `v3` | `[20/04/26]` | `Final Build with laser cut outer casing, buttons on the front finalised` | `To have the game finally playable with explainations` |
 
 ---
 
