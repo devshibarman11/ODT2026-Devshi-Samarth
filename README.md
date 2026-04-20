@@ -842,23 +842,31 @@ Example:
 Describe the final version of your project.
 
 **Response:**  
-`[Write here]`
+`## **18.1 Final Description**
+
+The final project is an interactive LED version of Connect 4, built using touch sensors, NeoPixel lights, and a buzzer. Players select a column by touching a sensor, and a colored disc appears to fall into place on a 7×6 grid.
+
+Each action is immediately visible and reinforced with sound. Different colors represent each player, making turns easy to follow. Invalid moves trigger a quick visual and audio response, while a win activates a celebratory sequence with lights, sound, and a smiley face.
+
+The experience focuses on clarity, responsiveness, and play. Simple interactions combined with visual and sound feedback make the game intuitive, engaging, and satisfying to use.`
 
 ## 18.2 What Works Well
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `Responses/Interaction - Touch inputs trigger immediate visual and sound feedback, making the gameplay feel smooth and engaging.`
+- `Clear visual system: Color-coded players and falling animations make the game state easy to understand at all times.`
+- `Sound effects, win animations, and small details like the smiley face add personality and enhance the overall experience.`
 
 ## 18.3 What Still Needs Improvement
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `Touch sensitivity: Inputs can still feel slightly inconsistent and may require fine-tuning for more reliable detection.`
+- `Timing - Some animations and delays slow down interaction flow, especially during feedback sequences.`
+- `The overall build could be more refined with better structuring and LED alignment.`
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
 
 **Response:**  
-`[Write here]`
+`The project initially aimed to create an auto-follow solar flower that would track and respond to light through mechanical movement. This involved using sensors, motors, and a fabricated structure.
+However, due to challenges with unstable sensor readings, complex mechanical movement, and limited access to fabrication tools (3D printing and laser cutting), the direction shifted. The focus moved from a kinetic object to an interactive system using available components.
+The final outcome became an LED-based interactive game, prioritizing responsiveness, clarity, and user experience over mechanical complexity.`
 
 ---
 
@@ -870,7 +878,11 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[Write here]`
+`Our team worked well in terms of time management, coordination, and shared responsibility. Tasks were clearly divided where electronics and wiring were handled by Devshi, fabrication and physical modeling by Samarth, while coding was done collaboratively. Despite this division, we worked together consistently in every session, which helped maintain alignment and continuity.
+
+What slowed us down were factors outside immediate control, particularly fabrication. Limited access to 3D printing and laser cutting facilities delayed progress. Additionally, understanding and correctly implementing addressable LEDs took longer than expected due to their complexity.
+
+Overall, time and task management were strong. We were able to adapt quickly, redistribute effort when needed, and stay productive across meetings. The balance between individual responsibility and collaborative problem-solving was a key strength in completing the project.`
 
 ## 19.2 Technical Reflection
 What did you learn about:
@@ -893,19 +905,23 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[Write here]`
+`We understood that play is not driven by complexity but by responsiveness and feedback loops. Meaningful play emerged when actions produced immediate, predictable yet satisfying outcomes, reinforcing engagement through repetition.
+Delight was embedded through micro-interactions—subtle animations, sound cues, and expressive moments like the smiley face. These elements transformed a functional system into an emotionally engaging experience.
+Clarity required deliberate reduction. By simplifying visual language (distinct colors, consistent motion), we ensured that the system communicated its state instantly, minimizing cognitive load for the player.
+Designing with touch highlighted the importance of responsiveness and tactility. The perceived quality of the system was directly tied to how immediate and reliable the input felt, emphasizing that physical interfaces demand precision beyond visual design.
+We observed that understanding is constructed through feedback. When interactions were consistent and legible, players intuitively grasped the system without instruction, reinforcing the value of implicit guidance over explicit explanation.`
 
 ## 19.4 If You Had One More Week
 What would you improve next?
 
 **Response:**  
-`[If we had an additional week, we would have focused on refining both the functionality and finish of the project. One key improvement area is the alignment and positioning of the LEDs with the circular cutouts in the MDF, which could have been executed with greater precision.
+`If we had an additional week, we would have focused on refining both the functionality and finish of the project. One key improvement area is the alignment and positioning of the LEDs with the circular cutouts in the MDF, which could have been executed with greater precision.
 
 We also realized that repairability was not fully considered—rather than removing the entire back panel for adjustments, incorporating a dedicated access hatch for the breadboard would have made maintenance much more efficient. While we did address accessibility to some extent by adding circular side cutouts for the power and ESP cables, this aspect could have been explored more thoughtfully.
 
 The touch-pin buttons were an interesting and engaging feature, but they would benefit from further refinement and more reliable execution.
 
-In terms of build quality, the use of a hot glue gun to assemble parts of the MDF resulted in slightly uneven edges. With more time, we would have aimed for a cleaner, more polished finish. Additionally, introducing elements such as ornamentation or a logo could have enhanced the overall visual identity of the project.]`
+In terms of build quality, the use of a hot glue gun to assemble parts of the MDF resulted in slightly uneven edges. With more time, we would have aimed for a cleaner, more polished finish. Additionally, introducing elements such as ornamentation or a logo could have enhanced the overall visual identity of the project.`
 
 ---
 
