@@ -719,10 +719,10 @@ Expected outcomes:
 
 | Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
 |---|---|---|---|---|
-| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 1 | `Explore idea of an auto-follow solar flower (light-tracking object)` | `Researched how light sensors work and how to detect direction of light. Sketched initial concepts for a flower that rotates toward light` | `Realized the project would require both electronic sensing + mechanical movement, making it more complex than expected.` | `start exploring movement` |
+| Week 2 | `Build working prototype for movement` | `Mechanical movement (servo control) was inconsistent.` | `Began reconsidering whether the interaction could be expressed differently without heavy mechanical dependency.` | `Re-evaluate project direction and explore alternative interaction formats.` |
+| Week 3 | `Planned to design a physical structure using 3D printing for the flower mechanism.` | `Due to time constraints, shifted to laser cutting as a faster alternative. However, the lab was fully booked and we couldn’t get access to the machine.` | `Due to lack of access (lab constraints) and time limitations, we decided to move away from a mechanically dependent solution of this model` | `[Re-evaluate project direction and explore alternatives, while simultaneously figuring out ways to work the model` |
+| Week 4 | `Finalize working prototype and complete project` | `Pivoted away from the solar flower and shifted to building an interactive LED-based game using available components. Designed and developed the Connect 4 system in a short span` | `Major shift from kinetic object → interactive system. Prioritized responsiveness, clarity, and user experience over mechanical complexity.` | `Final testing, debugging, and documentation for submission.` |
 
 ---
 
