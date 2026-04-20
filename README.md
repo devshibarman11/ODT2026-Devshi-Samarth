@@ -750,7 +750,7 @@ Expected outcomes:
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
-`[Write here]`
+`The biggest uncertainty is the **consistency of touch input during real use**. While the system works in testing, touch sensors can behave differently with changes in environment, user interaction, or electrical noise. Ensuring that inputs remain reliable and responsive across different users and conditions is the key challenge.`
 
 ---
 
