@@ -890,7 +890,13 @@ What did you learn about:
 What would you improve next?
 
 **Response:**  
-`[Write here]`
+`[If we had an additional week, we would have focused on refining both the functionality and finish of the project. One key improvement area is the alignment and positioning of the LEDs with the circular cutouts in the MDF, which could have been executed with greater precision.
+
+We also realized that repairability was not fully considered—rather than removing the entire back panel for adjustments, incorporating a dedicated access hatch for the breadboard would have made maintenance much more efficient. While we did address accessibility to some extent by adding circular side cutouts for the power and ESP cables, this aspect could have been explored more thoughtfully.
+
+The touch-pin buttons were an interesting and engaging feature, but they would benefit from further refinement and more reliable execution.
+
+In terms of build quality, the use of a hot glue gun to assemble parts of the MDF resulted in slightly uneven edges. With more time, we would have aimed for a cleaner, more polished finish. Additionally, introducing elements such as ornamentation or a logo could have enhanced the overall visual identity of the project.]`
 
 ---
 
