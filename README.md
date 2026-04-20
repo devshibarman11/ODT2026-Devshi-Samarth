@@ -616,7 +616,15 @@ Examples:
 - Why bearing instead of a plain shaft hole?
 
 **Response:**  
-`[Write here]`
+`We selected our materials and components based on a balance of efficiency, functionality, and feasibility within our constraints.
+
+For the main structure, we chose laser-cut MDF instead of 3D printing. While 3D printing could have offered more complex forms, it would have been significantly more time-consuming and less reliable given ongoing electricity constraints. Laser cutting allowed us to produce precise, repeatable parts quickly and assemble them efficiently.
+
+For the lighting system, we used seven individually addressable LED strips rather than discrete LEDs or analog LED strips. This choice was both cost-effective and easier to manage in terms of wiring and installation. More importantly, individually addressable LEDs gave us full control over each LED, allowing dynamic color changes and interactive feedback. This level of control would not have been possible with analog strips or individual LEDs without significantly increasing complexity.
+
+We opted for touch-pin inputs instead of physical buttons to explore capacitive touch as an interaction method. This made the interface feel more seamless and integrated into the surface rather than relying on protruding mechanical components. To improve usability, we wrapped the touch points in aluminium foil, which increased the effective contact area and made touch detection more responsive and reliable.
+
+Overall, each material and component was chosen to simplify fabrication, enhance interactivity, and stay within practical time and resource constraints while still allowing flexibility in design and functionality.`
 
 ## 12.3 Items to Purchase Separately
 
@@ -808,7 +816,15 @@ Include:
 - revisions.
 
 **Response:**  
-`[Write here]`
+`We began the fabrication process by prototyping the layout of the LEDs on a foam board base to determine accurate spacing and positioning. Once finalized, we soldered wires onto the LED strips and mapped out all the required electrical connections, including the LED circuitry and touch-button inputs.
+
+For the initial structure, the breadboard and components were mounted onto the foam board, creating a stable internal base. Wires were organized and secured using electrical tape and adhesive to ensure reliability and reduce movement during handling.
+
+The outer enclosure was then produced through laser cutting MDF panels. During assembly, we partially constructed the enclosure before inserting the internal system of circuits and LEDs. A layer of butter paper was added as a diffuser to soften and evenly distribute the LED light.
+
+After integrating all internal components, the enclosure was fully assembled and fastened using adhesive. Some adjustments were required during this stage, particularly revising the button wiring, as the original wire lengths were insufficient for the enclosure dimensions. The connections were modified accordingly to ensure proper fit and functionality.
+
+Finally, the build was closed and finished into a compact unit, with only the essential external connections, the power cable and ESP32 interface, accessible from the outside.]`
 
 ## 17.2 Build Photos
 Add photos throughout the project.
@@ -822,8 +838,13 @@ Suggested images:
 - final build.
 
 Example:
+<img src="images/Circuit_connections.HEIC">
+<img src="images/First_mount.HEIC">
+<img src="images/Led_Array.HEIC">
+<img src="images/First_Finish.HEIC">
+<img src="images/Mechanism_mounting.HEIC">
+<img src="images/FinalBuild_InPlay.HEIC">
 <img src="images/Final_Build.HEIC">
-
 
 
 ```
