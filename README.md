@@ -665,7 +665,15 @@ Include:
 - how documentation will be maintained.
 
 **Response:**  
-`[Write here]`
+`We plan to divide responsibilities based on individual strengths while still working collaboratively throughout. Electronics and wiring will be handled by Devshi, fabrication and physical modeling by Samarth, and coding will be developed jointly, with both members contributing and iterating together.
+
+Decisions will be made through open discussion, exploring different possibilities before finalizing an approach. The focus will be on avoiding conflicts and finding a balanced middle ground that works for the project.
+
+Progress will be reviewed through team sessions on alternate days, where we will share updates, track development, and discuss any new ideas or changes.
+
+If a task is delayed, the team will avoid rushing and instead understand the reason behind the delay, adjusting the plan accordingly while maintaining quality.
+
+Documentation will be maintained continuously by updating the project repository, taking photos of progress, and noting key decisions and iterations throughout the process.`
 
 ## 13.2 Task Breakdown
 
