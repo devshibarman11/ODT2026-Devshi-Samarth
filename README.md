@@ -439,7 +439,7 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/Code_flowchart.png">
 
 ## 10.4 Pseudocode
 
