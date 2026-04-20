@@ -931,7 +931,20 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Write here]`
+`Electronics
+We developed a clearer understanding of circuit planning, especially how to manage multiple components like LED strips, touch inputs, and power supplies within one system. We learned the importance of voltage and current considerations, particularly after experiencing overload issues, and became more careful about power distribution and component limits. Soldering and wire management also improved through repeated iterations.
+
+Coding
+We gained experience in structuring interactive code using MicroPython on the ESP32 microcontroller. This included handling inputs from touch pins, controlling individually addressable LEDs, and coordinating timing between actions such as lighting effects and game logic. Debugging became a key skill, especially when integrating multiple inputs and outputs into a single responsive system.
+
+Mechanisms
+Although the final build was not heavily mechanical, we learned how physical interaction elements like touch inputs influence user experience. Earlier exploration with components like servos helped us understand movement, control, and the trade-offs between mechanical and electronic interaction systems.
+
+Fabrication
+We learned how to translate a concept into a physical structure using laser-cut MDF. This included planning for tolerances, aligning components like LEDs with cutouts, and assembling parts in a logical sequence. We also understood the limitations of quick methods like hot glue and how they can affect finish quality.
+
+Integration
+One of the biggest learnings was how to bring all elements together into a cohesive system. Combining electronics, code, and physical structure required constant adjustments and problem-solving. We realized the importance of planning for accessibility, repairability, and wire management early on, as these factors significantly impact the final usability and reliability of the project.`
 
 ## 19.3 Design Reflection
 What did you learn about:
