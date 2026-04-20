@@ -1,0 +1,261 @@
+from machine import Pin, PWM, TouchPad
+import neopixel
+import time
+
+# -------- CONFIG --------
+NUM_ROWS = 7
+NUM_COLS = 6
+LEDS_PER_ROW = 12
+
+# -------- TOUCH PINS --------
+touch_pins = [4, 15, 13, 12, 14, 27]
+touches = [TouchPad(Pin(p)) for p in touch_pins]
+
+THRESHOLD = 400
+HOLD_TIME = 500  # milliseconds
+
+# -------- LED PINS --------
+row_pins = [5, 26, 32, 33, 21, 18, 22]
+rows = [neopixel.NeoPixel(Pin(p), LEDS_PER_ROW) for p in row_pins]
+
+# -------- BUZZER --------
+buzzer = PWM(Pin(25))
+buzzer.duty(0)
+
+# -------- GAME STATE --------
+grid = [[0 for _ in range(NUM_COLS)] for _ in range(NUM_ROWS)]
+current_player = 1
+
+# -------- COLORS --------
+RED = (80, 0, 0)
+GREEN = (0, 0, 80)   # BLUE player
+YELLOW = (255, 150, 0)
+WHITE = (60, 60, 60)
+OFF = (0, 0, 0)
+
+# -------- LED HELPERS --------
+def draw_circle(row, col, color):
+    i = col * 2
+    rows[row][i] = color
+    rows[row][i+1] = color
+    rows[row].write()
+
+def clear_circle(row, col):
+    i = col * 2
+    rows[row][i] = OFF
+    rows[row][i+1] = OFF
+    rows[row].write()
+
+def fill_board(color):
+    for r in range(NUM_ROWS):
+        for i in range(LEDS_PER_ROW):
+            rows[r][i] = color
+        rows[r].write()
+
+def clear_board():
+    fill_board(OFF)
+
+# -------- SMILEY FACE --------
+def show_smiley(color):
+    clear_board()
+
+    # eyes
+    draw_circle(1, 1, color)
+    draw_circle(1, 4, color)
+
+    # smile
+    draw_circle(4, 1, color)
+    draw_circle(5, 2, color)
+    draw_circle(5, 3, color)
+    draw_circle(4, 4, color)
+
+    # cheeks
+    draw_circle(3, 0, color)
+    draw_circle(3, 5, color)
+
+    time.sleep(1.2)
+
+# -------- INVALID MOVE ANIMATION (NEGATIVE SOUND) --------
+def invalid_move_animation(col):
+    tones = [500, 300, 150]  # deeper descending tones
+
+    original_colors = []
+    for row in range(NUM_ROWS):
+        if grid[row][col] == 1:
+            original_colors.append(RED)
+        elif grid[row][col] == 2:
+            original_colors.append(GREEN)
+        else:
+            original_colors.append(OFF)
+
+    for _ in range(2):
+        # overlay white
+        for row in range(NUM_ROWS):
+            draw_circle(row, col, WHITE)
+
+        # play error tones
+        for freq in tones:
+            buzzer.freq(freq)
+            buzzer.duty(400)
+            time.sleep_ms(90)
+
+        buzzer.duty(0)
+        time.sleep_ms(80)
+
+        # restore original colors
+        for row in range(NUM_ROWS):
+            draw_circle(row, col, original_colors[row])
+
+        time.sleep_ms(120)
+
+# -------- WIN CHECK --------
+def check_win(player):
+    for r in range(NUM_ROWS):
+        for c in range(NUM_COLS - 3):
+            if all(grid[r][c+i] == player for i in range(4)):
+                return True
+
+    for c in range(NUM_COLS):
+        for r in range(NUM_ROWS - 3):
+            if all(grid[r+i][c] == player for i in range(4)):
+                return True
+
+    for r in range(3, NUM_ROWS):
+        for c in range(NUM_COLS - 3):
+            if all(grid[r-i][c+i] == player for i in range(4)):
+                return True
+
+    for r in range(NUM_ROWS - 3):
+        for c in range(NUM_COLS - 3):
+            if all(grid[r+i][c+i] == player for i in range(4)):
+                return True
+
+    return False
+
+# -------- WIN ANIMATION --------
+def win_animation(player):
+    color = RED if player == 1 else GREEN
+
+    melody = [
+        (523, 120),
+        (659, 120),
+        (784, 120),
+        (1047, 200),
+        (784, 120),
+        (1047, 300)
+    ]
+
+    for i, (freq, duration) in enumerate(melody):
+        fill_board(color)
+
+        buzzer.freq(freq)
+        buzzer.duty(400)
+
+        time.sleep_ms(duration)
+
+        buzzer.duty(0)
+
+        if i % 2 == 0:
+            clear_board()
+        else:
+            fill_board(color)
+
+        time.sleep_ms(80)
+
+    fill_board(color)
+    time.sleep_ms(500)
+
+    show_smiley(color)
+
+# -------- RESET --------
+def reset_animation():
+    global grid, current_player
+
+    clear_board()
+
+    # yellow wipe
+    for col in range(NUM_COLS):
+        for row in range(NUM_ROWS):
+            draw_circle(row, col, YELLOW)
+            time.sleep_ms(40)
+
+    time.sleep_ms(300)
+
+    clear_board()
+
+    grid = [[0 for _ in range(NUM_COLS)] for _ in range(NUM_ROWS)]
+    current_player = 1
+
+    buzzer.duty(0)
+
+# -------- MOVE --------
+def handle_move(col):
+    global current_player
+
+    if grid[0][col] != 0:
+        invalid_move_animation(col)
+        return
+
+    for row in range(NUM_ROWS - 1, -1, -1):
+        if grid[row][col] == 0:
+
+            grid[row][col] = current_player
+
+            buzzer.freq(800)
+            buzzer.duty(300)
+
+            for r in range(row + 1):
+                draw_circle(r, col, RED if current_player == 1 else GREEN)
+                time.sleep_ms(40)
+                if r != row:
+                    clear_circle(r, col)
+
+            buzzer.duty(0)
+
+            if check_win(current_player):
+                win_animation(current_player)
+                reset_animation()
+                return
+
+            current_player = 2 if current_player == 1 else 1
+            return
+
+# -------- MANUAL RESET --------
+def check_manual_reset():
+    try:
+        v1 = touches[0].read()
+        v2 = touches[5].read()
+    except ValueError:
+        return False
+
+    return (v1 < THRESHOLD) and (v2 < THRESHOLD)
+
+# -------- TOUCH --------
+prev_touched = [False] * NUM_COLS
+
+# -------- MAIN --------
+clear_board()
+
+while True:
+
+    if check_manual_reset():
+        print("Manual Reset")
+        reset_animation()
+        time.sleep_ms(500)
+        continue
+
+    for col in range(NUM_COLS):
+        try:
+            value = touches[col].read()
+        except ValueError:
+            continue
+
+        touched = value < THRESHOLD
+
+        if touched and not prev_touched[col]:
+            handle_move(col)
+
+        prev_touched[col] = touched
+
+    time.sleep_ms(10)
+
