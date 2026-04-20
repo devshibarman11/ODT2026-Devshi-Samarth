@@ -667,13 +667,13 @@ Include:
 
 | Area | Main Owner | Support Owner |
 |---|---|---|
-| Concept and gameplay | `[Name]` | `[Name]` |
-| Electronics | `[Name]` | `[Name]` |
-| Coding | `[Name]` | `[Name]` |
-| App | `[Name]` | `[Name]` |
-| Mechanical build | `[Name]` | `[Name]` |
-| Testing | `[Name]` | `[Name]` |
-| Documentation | `[Name]` | `[Name]` |
+| Concept and gameplay | `Both` | `Both` |
+| Electronics | `Devshi` | `Samarth` |
+| Coding | `Both` | `Both` |
+| App | `N/A` | `N/A` |
+| Mechanical build | `Samarth` | `Devshi` |
+| Testing | `Samarth` | `Devshi` |
+| Documentation | `Devshi` | `Samarth` |
 
 ---
 
