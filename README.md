@@ -261,7 +261,7 @@ All components are integrated into a fabricated tabletop structure that holds th
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/ConceptSketch.jpeg">
 
 Example:
 ```md
@@ -277,7 +277,7 @@ Add a sketch with labels showing:
 - output elements.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/BuildSketch.jpeg">
 
 ## 7.3 Approximate Dimensions
 
@@ -375,7 +375,7 @@ All components are wired back to the ESP32, which acts as the central hub.`
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/CircuitDiagram.jpeg">
 
 ## 9.4 Power Plan
 
